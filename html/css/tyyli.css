@@ -1,4 +1,17 @@
 img {
 clear: both;
 float: left;
+margin: 10px;
  }
+
+#eka {
+  float: left;
+}
+#toka {
+  clear: both;
+  float: right;
+}
+
+table {
+  border: 1px solid black;
+  }
