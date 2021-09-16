@@ -1,0 +1,62 @@
+h1 {
+color: green;
+}
+#a1 {
+  font-size: 1;
+  color: yellow;
+  }
+#a2 {
+  font-size: 2;
+  color: purple;
+
+}
+#a3 {
+  font-size: 20px;
+  color: pink;
+
+}
+#a4 {
+  font-size: 4em;
+  color: orange;
+
+}
+#a5 {
+  font-size: 150%;
+  color: lime;
+}
+#a6 {
+    font-size: 7;
+    color: #ce0023;
+}
+#a7 {
+  font-size: 2em;
+  color: rgb(153, 92, 30);
+}
+#a8 {
+  font-size: medium;
+  color: #ff00FF
+}
+#a9 {
+  font-size: 9em;
+  color: #266920
+
+}
+#a0 {
+  font-size: 15px;
+  color: #00FFFF
+}
+#neque {
+  font-family: cursive;
+}
+#what_is {
+  font-family: monospace;
+}
+#it_is_long {
+  font-family: serif;
+}
+#contrary {
+  font-family:sans-serif;
+}
+#variations {
+  font-family: fantasy;
+}
