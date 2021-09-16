@@ -14,4 +14,16 @@ margin: 10px;
 
 table {
   border: 1px solid black;
+  border-collapse: collapse;
+
   }
+tr:nth-child(even) {
+  background-color: #FFFF00;
+}
+tr:nth-child(odd){
+  background-color: #FFF000;
+  
+}
+th {
+  background-color: #F00000;
+}
