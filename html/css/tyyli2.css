@@ -1,3 +1,42 @@
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
 table {
-  colspan=2
+  width: 500px;
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+tr:nth-child(odd){
+background-color: lightgrey;
+}
+tr:nth-child(even){
+  background-color: darkgrey;
+
+}
+th {
+  background-color: grey;
+  text-align: right;
+  font-weight: bolder;
+}
+td {
+  text-align: right;
+
+}
+#kuvaus {
+  text-align: left;
+}
+.fruit {
+  text-align: left;
+  border: 0px;
+}
+
+}
+.numbers {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
