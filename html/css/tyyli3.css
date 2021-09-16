@@ -45,18 +45,21 @@ color: green;
   font-size: 15px;
   color: #00FFFF
 }
+#henkka {
+  font-family: 'Dancing Script', sans-serif;
+}
 #neque {
-  font-family: cursive;
+  font-family: 'Architects Daughter', cursive;
 }
 #what_is {
-  font-family: monospace;
+  font-family: 'Pacifico', monospace;
 }
 #it_is_long {
-  font-family: serif;
+  font-family: 'Permanent Marker', serif;
 }
 #contrary {
-  font-family:sans-serif;
+  font-family: 'Shadows Into Light', sans-serif;
 }
 #variations {
-  font-family: fantasy;
+  font-family: 'Syncopate', fantasy;
 }
