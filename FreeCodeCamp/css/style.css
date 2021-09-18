@@ -1,0 +1,63 @@
+main {
+  background-color: #ededed;
+
+}
+header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Architects Daughter', cursive;
+
+
+}
+#tribute-info {
+  font-size: 1em;
+}
+h1 {
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Fleur De Leah', cursive;
+  font-size: 3em;
+}
+h3 {
+  text-align: center;
+  padding: 10px
+}
+  .img-div {
+    width: 95%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 20px;
+    margin-top: :40px;
+    margin-bottom: 50px
+
+}
+#image {
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+color:blue
+
+}
+section {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.3em;
+  width: 60%;
+  margin:auto;
+  height: auto;
+  text-align: left;
+}
+li {
+  padding: 5px;
+}
+blockquote {
+  padding: 10px;
+}
+footer {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  font-size: 2em;
+  padding: 10px;
+}
