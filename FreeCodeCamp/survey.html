@@ -2,37 +2,131 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Survey</title>
+    <title>fake Survey</title>
+    <link rel="stylesheet" href="css/survey.css" type="text/css">
   </head>
   <body>
-    <main>
-      <form class="survey-form" action="index.html" method="post">
-        <label for="full_name">name</label>
-        <br>
-        <input  type="text" placeholder="Enter your name" id="full_name" name="full_name" value="" required>
-        <br>
-        <label for="email">Email</label>
-        <br>
-        <input type="text" name="email" id=email value="" placeholder="Enter your email" required>
-        <br>
-        <label for="age">How old are you?</label>
-        <br>
-        <input type="number" id="age" name="age" value="" min="0" max="130" placeholder="your age">
-        <br>
-        <label for="role">What is your current role?</label>
-        <br>
-        <select class"choose_one" name="current_role" id="role" placeholder="Select current role">
-          <<option default disabled value="disabled">Nykyinen rooli</option>
-          <option value="student">Student</option>
-          <option value="full time job">Full time job</option>
-          <option value="full time learner">Full time learner</option>
-          <option value="prefer not to say">Prefer not to say</option>
-          <option value="other">Other</option>
+    <header>
+      <h1>My first fake survey</h1>
+      <p id="description">Just want to see how this works.</p>
 
-        </select>
+    </header>
+    <main>
+
+      </div>
+
+      <form class="survey-form" action="index.html" method="post">
+        <div class="basic_info" >
+          <label id="name_label" for="Name">Name</label>
+          <br>
+          <input  type="text" class="textbox" placeholder="Enter your name" id="name" name="full_name" value="" required>
+          <br>
+        </div>
+
+          <br>
+        <div class="basic_info" id="div_mail">
+          <label id="email-label" for="email">Email</label>
+          <br>
+          <input type="email" class="textbox" name="email" id=email value="" placeholder="Enter your email" required>
+        </div>
+        <div class="basic_info">
+          <br>
+          <label id="number-label" for="age">How old are you?</label>
+          <br>
+          <input type="number" class="textbox" id="number" name="age" value="" min="0" max="130" placeholder="your age">
+
+        </div>
+        <div class="basic_info">
+          <br>
+        </div>
+        <div class="basic_info">
+          <label for="">Sex</label>
+          <br>
+          <input type="radio" name="sex" id="man" value="man">
+          <label for="man">Man</label>
+          <br>
+          <input type="radio" id="woman" name="sex" value="woman">
+          <label for="woman">Woman</label>
+          <br>
+          <input type="radio" id="other" name="sex" value="other">
+          <label for="other">Other</label>
+
+        </div>
+        <div class="basic_info">
+          <br>
+          <label for="role">What is your current role?</label>
+          <br>
+          <select class="textbox" name="current_role" id="dropdown" placeholder="Select current role">
+            <<option selected disabled  hidden>Select current role</option>
+            <option value="student">Student</option>
+            <option value="full time learner">Full time learner</option>
+            <option value="full time job">Full time job</option>
+            <option value="prefer not to say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+
+        </div>
+        <div class="basic_info">
+          <br>
+          <label for="favorite_feature">What is your favorite thing to do?</label>
+          <br>
+          <select id="favorite_feature" class="textbox" name="favorite_feature">
+            <option selected disabled hidden>Favorite feature</option>
+            <option value="eat_taco">Eating tacos</option>
+            <option value="homeworks">Do homeworks</option>
+            <option value="movies">Watching movies</option>
+            <option value="awesome">Be awesome!!</option>
+          </select>
+
+        </div>
+          <br>
+        <div class="basic_info">
+          <label for="">What would you like to happen soon? (Check all that apply)</label>
+          <br>
+          <input type="checkbox" name="improved" id="lottery" value="lottery">
+          <label for="lottery">Winning lottery</label>
+          <br>
+          <input type="checkbox" name="improved" id="new_work" value="new_work">
+          <label for="new_work">Get a new work</label>
+          <br>
+          <input type="checkbox" name="improved" id="dog" alue="dog">
+          <label for="dog">Get a dog</label>
+          <br>
+          <input type="checkbox" name="improved" id="unicorn" value="unicorn">
+          <label for="unicorn">Get a unicorn</label>
+          <br>
+          <input type="checkbox" name="improved" id="new_hobby" value="new_hobby">
+          <label for="new_hobby">Start a new hobby</label>
+          <br>
+          <input type="checkbox" name="improved" id="glitter" value="glitter">
+          <label for="glitter">Get a glitter shower</label>
+          <br>
+          <input type="checkbox" name="improved" id="movie" value="movie">
+          <label for="movie">See new movie</label>
+          <br>
+          <input type="checkbox" name="improved" id="appertment" value="apartment">
+          <label for="apartment">Get new apartment</label>
+          <br>
+          <input type="checkbox" name="improved" id="band" value="band">
+          <label for="band">See your favorite band</label>
+          <br>
+          <input type="checkbox" name="improved" id="friend" value="friend">
+          <label for="friend">Get a new friend</label>
+          <br>
+          <input type="checkbox" name="improved" id="be_come_awesome" value="be_come_awesome">
+          <label for="become awesome">Be come awesome!!</label>
+        </div>
+        <br>
+        <div class="basic_info" >
+          <label for="comment">Any comments or suggestions?</label>
+          <br>
+          <textarea name="comment" id="comment" rows="8" cols="80"></textarea>
+        </div>
+        <br>
+        <div class="mtb">
+          <input id="submitb" type="submit" name="submit">
+        </div>
       </form>
     </main>
-    <img src="" alt="">
-    <a href="www">anun</a>
   </body>
 </html>

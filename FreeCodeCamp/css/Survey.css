@@ -1,0 +1,58 @@
+body {
+  background-image: url(https://p0.pxfuel.com/preview/220/651/712/swiss-white-shepherd-dog-animals-white.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+h1 {
+  text-align: center;
+  color: red;
+}
+header {
+  align-items: center;
+  text-align: center;
+  color: red;
+  margin: auto;
+
+}
+.survey-form {
+  background-color: rgba( 47, 38, 38, 0.8);
+
+  text-align: left;
+
+  width: 50%;
+margin: auto;
+margin-bottom: 60px;
+
+}
+.basic_info {
+  text-align: left;
+  margin-left: 20px;
+  color: red;
+  font-size: 1.5em;
+
+
+}
+#comment{
+
+  height: 120px;
+  width: 90%
+
+
+}
+#div_mail {
+}
+
+.textbox {
+  height: 30px;
+  width: 90%;
+  border-radius: 25px;
+
+
+}
+
+#submitb {
+  margin-left: 80%;
+  margin-bottom: 30px;
+  size:60px;
+}
