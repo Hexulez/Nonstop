@@ -1,0 +1,44 @@
+/*#nav-bar {
+
+
+background-color: lightblue;
+padding: 10px;
+border:5px black;
+}*/
+main {
+margin-top:0px;
+}
+#funny {
+margin-top:500px;
+text-align: justify;
+}
+#nav-bar-ul {
+
+  float: left;
+  display:block;
+  background-color: lightblue;
+  margin-top: 0;
+  color: blue;
+  width:100%;
+  border:5px black
+
+}
+ul {
+  border: 1px black;
+  overflow: hidden;
+  position:fixed;
+
+}
+li {
+  display: inline-block;
+  padding:10px;
+  font-size: 1.5em;
+  border: 5px black;
+  border-radius: 15px;
+  border-color: black;
+}
+#header-img {
+  float: left;
+  display: block;
+  width: 45px;
+}
