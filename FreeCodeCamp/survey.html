@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <h1>My first fake survey</h1>
+      <h1 id="title">My first fake survey</h1>
       <p id="description">Just want to see how this works.</p>
 
     </header>
@@ -15,9 +15,9 @@
 
       </div>
 
-      <form class="survey-form" action="index.html" method="post">
+      <form id="survey-form"class="survey_form" action="index.html" method="post">
         <div class="basic_info" >
-          <label id="name_label" for="Name">Name</label>
+          <label id="name-label" for="Name">Name</label>
           <br>
           <input  type="text" class="textbox" placeholder="Enter your name" id="name" name="full_name" value="" required>
           <br>
@@ -89,7 +89,7 @@
           <input type="checkbox" name="improved" id="new_work" value="new_work">
           <label for="new_work">Get a new work</label>
           <br>
-          <input type="checkbox" name="improved" id="dog" alue="dog">
+          <input type="checkbox" name="improved" id="dog" value="dog">
           <label for="dog">Get a dog</label>
           <br>
           <input type="checkbox" name="improved" id="unicorn" value="unicorn">
@@ -124,7 +124,7 @@
         </div>
         <br>
         <div class="mtb">
-          <input id="submitb" type="submit" name="submit">
+          <input id="submit" type="submit" name="submit" action="submit">
         </div>
       </form>
     </main>
