@@ -1,0 +1,114 @@
+/*
+white = FFFEFF
+royal purple = 7D5BA6
+xanadu = 7D938A
+oxford blue = 040926
+rich black = 000300
+*/
+header {
+  font-family: 'Unkempt', cursive;
+  text-align: center;
+  width: 75%;
+  border: solid #FFFEFF 2px;
+  background-color: #000300;
+  margin: -20
+  color: #7D5BA6;
+  border-radius: 50px;
+  margin: auto;
+}
+#header_1 {
+  color:#7D5BA6;
+  font-size: 3em;
+  padding: -10px;
+}
+#header_text{
+
+  color:#7D5BA6;
+}
+#nav_link {
+  list-style-type: none;
+  background-color: #040926;
+  width: 600px;
+  margin:auto;
+}
+
+li {
+  display: inline-flex;
+  font-size: 1.5em;
+  text-align: left;
+  padding:0px 15px 0px 0px;
+
+
+}
+.nav_link {
+  color: #FFFEFF;
+}
+main {
+  color:#000300;
+  font-size: 1.1em;
+}
+
+body{
+  font-family: 'Unkempt', cursive;
+  font-size:1.1em;
+  background-image:url(../kuvat/tausta.jpg) ;
+  background-size: 100%
+
+ }
+ aside {
+   margin-right: 0px;
+   float:right;
+   background-color: #040926;
+   border-radius: 25px;
+   height: auto;
+   width: 150px;
+ }
+.jemma_tarina {
+  color: #7D5BA6;
+}
+
+.tarinaa {
+  border: solid #040926 1.5px;
+  border-radius: 25px;
+  /*background-color: rgba(0, 999, 0, 0.7 );*/
+  background-color: #7D938Add;
+  width:85%;
+  margin:auto;
+  z-index: -1
+
+}
+.tarina-text {
+  padding: 0px 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+footer {
+  background-color: #000300;
+  text-align:right;
+
+}
+.copyr {
+  color: #FFFEFF;
+  display: inline;
+  border:
+}
+.kuvat {
+  width:50%;
+display: block;
+  margin: auto;
+
+
+
+}
+#test {
+margin-left: 0px;
+margin-right: 70%;
+}
+#leffa {
+display: block;
+margin: auto;
+
+}
