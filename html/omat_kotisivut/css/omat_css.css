@@ -27,7 +27,7 @@ header {
 }
 #nav_link {
   list-style-type: none;
-  background-color: #040926;
+  /*background-color: #040926;*/
   width: 600px;
   margin:auto;
 }
@@ -91,14 +91,18 @@ footer {
 
 }
 .copyr {
+margin-right: 5px;
   color: #FFFEFF;
   display: inline;
   border:
+
 }
 .kuvat {
   width:50%;
 display: block;
   margin: auto;
+  margin-bottom: 10px;
+  border-radius: 25px;
 
 
 
