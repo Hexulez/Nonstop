@@ -2,12 +2,20 @@ body {
   background-color: black;
   color:pink;
 }
+#header {
+  margin-top: 0px;
+  position: absolute;
+}
 #header-img {
+
   width: 50px;
   padding-bottom: 0px;
   padding-top: 5px;
 }
 #nav-bar {
+  margin-top: -5px;
+  position: fixed;
+
 
 
 
@@ -17,8 +25,8 @@ width: 100%;
 position: fixed;
 background-color: lightblue;
 padding-bottom: 5px;
-overflow: hidden;
 z-index: +1;
+margin-left:50px;
 
 }
 li {
@@ -31,5 +39,12 @@ li {
 main {
 position:relative;
 top: 70px
+
+}
+
+@media only screen and (max-width 500px) {
+  li {
+    margin-right: 49px;
+  }
 
 }

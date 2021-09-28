@@ -1,0 +1,28 @@
+#navbar {
+  position: fixed;
+  display: block;
+  width: 280px;
+  height: 100%;
+  background-color: lightgray;
+  margin: 0px;
+  top:0;
+  color: black;
+
+}
+#navhead {
+  border-bottom: solid 1px;
+  font-size: 1.9em;
+}
+
+.nav-link {
+font-size: 1.7em;
+color: black;
+
+}
+
+#navlist {
+  list-style: none;
+}
+#main-doc {
+  margin:25px 10px 10px 290px;
+}
