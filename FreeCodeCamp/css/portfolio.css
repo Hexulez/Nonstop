@@ -1,0 +1,46 @@
+
+#welcome-section {
+  background-color: black;
+  color: green;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+  text-align: center;
+  margin: 0px;
+}
+
+#navbar {
+  position: fixed;
+  margin-top: 0px;
+  width: 100vh;
+  background-color: yellow;
+
+}
+h1 {
+  font-size: 3em;
+  position: absolute;
+  top:50vh;
+  left: 35vw;
+
+}
+#welcome-section p {
+  font-size: 1.7em;
+  position: relative;
+  top: 10px;
+  
+}
+.projects {
+  background-color: #734634;
+  width: 100vh;
+
+}
+#end {
+  height: 100vh;
+  width: 100vh;
+
+}
+footer p {
+  font-size: 1.7em;
+
+}
