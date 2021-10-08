@@ -1,0 +1,88 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@Hexulez
+TiinaKop
+/
+NonStop
+Public
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+NonStop/parralx/projekti.css
+
+TiinaKop uusi
+Latest commit efa332a 4 hours ago
+ History
+ 0 contributors
+45 lines (40 sloc)  951 Bytes
+
+body, html {
+  height: 100%;
+  }
+
+.harrastus {
+    background-image: url('kissa2.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.harrastus2 {
+    background-image: url('kissa2.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.harrastus3 {
+    background-image: url('kissa2.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.kuva4 {
+    background-image: url('kissa2.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.tekstit {
+    height:500px;
+    background-color:powderblue;
+    font-size:20px
+    }
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

@@ -1,5 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin:0px;
+}
 
 #welcome-section {
+
+  top: 0px;
+  left:0px;
   background-color: black;
   color: green;
   height: 100vh;
@@ -11,36 +21,80 @@
 }
 
 #navbar {
-  position: fixed;
-  margin-top: 0px;
-  width: 100vh;
+
+  position:fixed;
+  float: left;
+
+  margin: auto;
+  width: 100vw;
   background-color: yellow;
 
 }
-h1 {
+a:hover {
+  color: pink;
+}
+.header_text {
   font-size: 3em;
-  position: absolute;
-  top:50vh;
-  left: 35vw;
+  position: relative;
+  top:45vh;
+
 
 }
-#welcome-section p {
+.under-text {
   font-size: 1.7em;
   position: relative;
-  top: 10px;
-  
+  top: 50vh;
+
 }
 .projects {
   background-color: #734634;
-  width: 100vh;
+  width: 100vw;
+  height: auto;
+  text-align: center;
 
 }
-#end {
-  height: 100vh;
-  width: 100vh;
+.project-tile {
+  width: 45vw;
+  height:100vh;
+  margin: 2vh 2vw 2vh 2vw;
 
 }
+.link {
+  font-size: 2em;
+  text-decoration: none;
+  margin: 5px;
+  text-align: center;
+  color:black;
+
+}
+footer{
+  width: 100vw;
+  background-color: black;
+  color: white;
+
+}
+
 footer p {
   font-size: 1.7em;
+
+}
+
+.words {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: #104305;
+  margin: 0px;
+}
+.text-center {
+  text-align: center;
+}
+.h2_text {
+  top:50;
+}
+
+@media query {
+    .link {
+      color: red;
 
 }
