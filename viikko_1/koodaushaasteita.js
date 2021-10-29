@@ -44,7 +44,8 @@ function sekuntit(x,y,z) {
 
 sekuntit(10, 10, 10);
 
-
+/* howOld Funktio hakee tämän hetken päivämäärän ja ottaa arvot myös käyttäjältä
+millä se laskee karkeasti kuinka paljon päivillä on eroavaisuutta.*/
 function howOld(d, m, y) {
   const today = new Date();
   var year = today.getFullYear();
@@ -82,7 +83,9 @@ function howOld(d, m, y) {
         return 334;
       case 12:
         return 365;
-      break
+      default:
+        return 0;
+        break
     }
   }
 var synt = vuodet(y) + monthToDays(m) + d;
@@ -91,7 +94,8 @@ console.log(nyt - synt);
 return nyt- synt;
 }
   howOld(28, 9, 2021)
-
+/* myTest funktio ottaa formin tiedot ja muuttaa ne numeroiksi jonka jälkeen kutsuu
+howOld funktiota. Joka laskee hyvin karrikoidusti tuon päivien määrän. */
   function myTest() {
     let paiva = document.getElementById('paava').value;
     let kk = document.getElementById('kuukaus').value;
