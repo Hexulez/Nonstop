@@ -1,15 +1,24 @@
-function minMax(arr) {
-  return  Math.min(...arr) + ", " +  Math.max(...arr);
+function minMax() {
+  let arr = document.getElementById("minmax").value;
+  arr = arr.trim();
+  arr = arr.split(" ");
+  console.log(arr);
+  numeroiksi(arr);
+  return  document.getElementById("pienin").innerHTML =  Math.min(...arr) + ", " +  Math.max(...arr);
 }
 
-console.log(minMax([1, 4, 5, 7]))
+console.log(minMax([1, 4, 5, 7]));
 
-function parillinen(num) {
-    if (num % 2 === 0) {
-      return "parillinen"
+function pari() {
+  let num = document.getElementById("parillinen").value;
+    if (num == 0) {
+    return document.getElementById("pariton").innerHTML = "Numero on 0"
+  }
+    if else (num % 2 === 0) {
+      return document.getElementById("pariton").innerHTML = "parillinen";
     }
     else {
-      return "pariton"
+      return document.getElementById("pariton").innerHTML  = "Pariton";
     }
 }
 
@@ -47,6 +56,10 @@ function kuukausi(num) {
   }
 }
 
+function kuukausiksi() {
+  let kk = document.getElementById("kuukausiksi").value;
+  return kuukausi(kk);
+}
 console.log(kuukausi(5));
 
 function osTiedot(etunimi, sukunimi, losoite, postinumero, postitoimipaikka, puhelin, mail) {
@@ -83,3 +96,15 @@ function arvosana(nimi, num) {
 
 
 console.log(arvosana("matti", 76));
+
+function numeroiksi(num) {
+  return parseInt(num, 10);
+}
+
+function ekat() {
+  let min = document.getElementById("minMax").value;
+  //let parillinen = document.getElementById("parillinen").value;
+  //let kk = document.getElementById("kuukausi").value;
+  //let order = document.getElementById("jarjesta").value;
+
+}
