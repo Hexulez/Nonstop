@@ -7,21 +7,54 @@
   </head>
   <body>
     <div class="container">
+      <!-- html on rakennettu niin että jokaiselle asialle on oma laatikko mistä kerää tiedon,
+      ja suorittaa halutun funktion että millä saa halutun tuloksen.-->
       <form class="jsJutut" action="index.html" method="post">
         <input type="text" id="minmax" placeholder="annettujen lukujen suurin ja pienin">
         <p id="pienin"></p>
-        <button type="button" onclick="minMax()" name="button">pienin ja suurin</button><br><br>
-        <input type="text" id="parillinen" placeholder="onko parillinen?" ><p id="pariton"></p>
-        <button type="button" onclick="pari()" name="button">"parillinen vai pariton"</button><br><br>
-        <input type="text" id="kuukausiksi" placeholder="Annettu numero kuukautena" ><p id="kk"></p>
-        <button type="button" onclick="kuukausiksi()" name="button">"numero kuukausiksi"</button><br><br>
-        <input type="text" id="jarjesta" placeholder="kirjaimet järjestykseen" value=""><p id="ordered"></p>
-        <button type="button" onclick="jarjesta()" id="button1">Kirjaimet järjestyksessä</button><br><br>
+        <button type="button" onclick="minMax()">pienin ja suurin</button>
+        <br><br>
+        <input type="text" id="parillinen" placeholder="onko parillinen?" >
+        <p id="pariton"></p>
+        <button type="button" onclick="pari()">Parillinen vai pariton</button>
+        <br><br>
+        <input type="text" id="kuukausiks" placeholder="Annettu numero kuukautena" >
+        <p id="kk"></p>
+        <button type="button" onclick="kuukausiksi()">numero kuukausiksi</button>
+        <br><br>
+        <input type="text" id="jarjest" placeholder="kirjaimet järjestykseen" value=""><p id="ordered"></p>
+        <button type="button" onclick="aakkos()">Kirjaimet järjestyksessä</button>
+        <br><br>
       </form>
       <form class="arvosana" action="index.html" method="post">
         <input type="text" id="nimi" placeholder="nimi">
-        <input type="number" id="pisteet" placeholder="pistemäärä" ><br>
+        <input type="number" id="pisteet" placeholder="pistemäärä" >
+        <br>
         <p id="arvosana"></p>
+        <button type="button" onclick="arvostele()">Arvostele</button>
+      </form>
+      <br><br>
+      <!-- Tämä viimeinen osio olikin hieman haastavampi niin toistaiseksi jätän sen mietintään.
+      Palaan myöhemmin Kun saan ensin tehtyä muut asiat pois alta -->
+      <form class="" action="index.html" method="post">
+        <label for="etunimi">etunimi</label>
+        <input type="text" id="etunimi" >
+        <label for="sukunimi">sukunimi</label>
+        <input type="text" id="sukunimi">
+        <label for="lahiosoite">lähiosoite</label>
+        <input type="text" id="lahiosoite">
+        <label for="post">postinumero</label>
+        <input type="text" id="post">
+        <label for="postitoimipaikka"></label>
+        <input type="text" id="postitoimipaikka">
+        <label for="puh">puhelin</label>
+        <input type="tel" id="puh">
+        <label for="mail"></label>
+        <input type="email" id="mail">
+        <button type="button" onclick="uusiIhminen">Lisää uusi ihminen</button>
+        <p id="lista"></p>
+        <button type="button" onclick="tulosta()"></button>
+        <p id="ulosta"></p>
       </form>
     </div>
 
