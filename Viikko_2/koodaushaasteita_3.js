@@ -1,25 +1,68 @@
+// Armstrongin numerot
 function armstrong() {
   let vastaus = [];
   for (var i = 100; i < 1000; i++) {
     let x = i.toString().split("");
       let luku = 0;
-      for (let y = 0 ; y < x.length; i++) {
-      luku += parseInt(x[y] * 3, 10);
+      for (let y = 0 ; y < x.length; y++) {
+      luku += parseInt(x[y] ** 3, 10);
       if (luku == i) {
         vastaus.push(luku);
-
+        break
       }
-
+      else {
+        continue
       }
-    console.log(x);
-    console.log(i);
-    console.log("luku");
+      }
+  }
+  return vastaus;
+}
+
+
+console.log(armstrong())
+
+//tulostaa tähtiä
+function tulosta(num) {
+  let merkki ="";
+  for (let i = 0; i < num;  i++) {
+    merkki += "*";
+    console.log(merkki);
 
   }
 }
-function testi() {
+tulosta(5)
 
-  return armstrong()
+
+function salakoodi(text) {
+  let kirjaimet = ["a", "e", "i", "o", "s"];
+  let numerot = ["4", "3", "1", "0","5"];
+  for (let i = 0; i < 5; i++) {
+    let regex = new RegExp(kirjaimet[i], "g");
+    text = text.replace(regex, numerot[i]);
+  }
+  return text;
 }
-armstrong()
-console.log(luku);
+
+console.log(salakoodi("minä olen paras"));
+
+// hikka laskenta
+
+function hicUps() {
+  for (let i = 0; i <=100; i++){
+    if (i % 3 == 0 && i % 5 == 0){
+      console.log("hic-up");
+    }
+    else if (i % 3 == 0) {
+      console.log("hic");
+    }
+    else if (i % 5 == 0){
+      console.log("up");
+    }
+    else {
+      console.log(i);
+    }
+  }
+
+}
+
+console.log(hicUps())
