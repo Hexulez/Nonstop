@@ -17,7 +17,9 @@ function armstrong() {
   }
   return vastaus;
 }
-
+function testi() {
+return document.getElementById("arms").innerHTML = armstrong()
+}
 
 console.log(armstrong())
 
@@ -44,6 +46,11 @@ function salakoodi(text) {
 }
 
 console.log(salakoodi("minä olen paras"));
+
+function salaa() {
+  let text = document.getElementById("koodaa").value;
+  return document.getElementById("koodattu").innerHTML = salakoodi(text);
+}
 
 // hikka laskenta
 
