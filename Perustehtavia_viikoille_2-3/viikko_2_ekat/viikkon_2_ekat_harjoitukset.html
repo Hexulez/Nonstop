@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="viikkon_2_ekat_harjoitukset.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="viikkon_2_ekat_harjoitukset.css">
+    <title></title>
+  </head>
+  <body onload="coloring()">
+    <div  class="first">
+      <input type="text" id="eka" >
+      <input type="text" id="toka" >
+      <input type="text" id="kolmas" >
+      <p id="jarkassa"></p>
+      <button type="button" onclick="jarjesta()">Järjestä</button>
+      <br><br>
+    </div>
+    <div class="second">
+      <input type="text" id="isoinEka" >
+      <input type="text" id="isoinToka" >
+      <input type="text" id="isoinKolmas" >
+      <input type="text" id="isoinNel" >
+      <input type="text" id="isoinViis" >
+      <p id="isoin"></p>
+      <button type="button" onclick="suurin()">Isoin</button>
+      <br><br>
+
+    </div>
+    <div class="third">
+      <input type="text" id="pariton" >
+      <p id="parinVastaus"></p>
+      <button type="button" onclick="parillinen()">Onko pariton?</button>
+    </div>
+    <br><br>
+
+    <div class="fourth">
+      <input type="text" id="ika">
+      <p id="menoPeli"></p>
+      <button type="button" onclick="saaAjaa()">Mitä saa ajaa</button>
+      <br><br>
+    </div>
+
+    <div class="fifth">
+      <select class="" id="trans" onchange="muuta()">
+        <option value="en">Englanti</option>
+        <option value="fi">Suomi</option>
+        <option value="swe">Ruotsi</option>
+        <option value="es">Espanja</option>
+      </select>
+      <p id="hello">Hello World!</p>
+
+    </div>
+
+    <button type="button" onclick="coloring()">väri testi</button>
+
+  </body>
+</html>
