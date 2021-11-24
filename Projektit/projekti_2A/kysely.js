@@ -22,7 +22,7 @@ let  kysymys2= form.k2.value;
 let kysymys3 = form.k3.value;
 let kysymys4 = form.k4.value;
 let kysymys5 = form.k5.value;
-const vastaukset = [1, 1, 0, 1, 3];
+const vastaukset = (b, b, a, b, d);
 
 tarkistus(kysymys1, vastaukset[0]) {
   return alert ("jee")
