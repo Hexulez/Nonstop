@@ -25,6 +25,6 @@ let kysymys5 = form.k5.value;
 const vastaukset = [1, 1, 0, 1, 3];
 
 tarkistus(kysymys1, vastaukset[0]) {
-
+  return alert ("jee")
 
 }
