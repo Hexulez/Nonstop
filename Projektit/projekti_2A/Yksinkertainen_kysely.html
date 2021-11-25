@@ -8,57 +8,64 @@
   </head>
   <body>
     <div class="container">
+
       <header>
         <h1>Helppo kysely</h1>
 
       </header>
 
-      <form class="kysely" onsubmit="return tarkastaLomake(this)" >
-        <p>Mitä käytetään määrittelemään paikallinen muuttuja </p>
-        <input type="radio" id="k1a" name="k1" value="a">
-        <label for="k1a">var</label><br>
-        <input type="radio" id="k1b" name="k1" value="b">
-        <label for="k1b">let</label>
-        <input type="radio" id="k1c" name="k1" value="c">
-        <label for="k1c">const</label>
+      <div id="printHere">
 
-        <p>minkä merkkien sisällä objektin sisältö on?</p>
-        <input type="radio" id="k2a" name="k2" value="a">
-        <label for="k2a">()</label> <br>
-        <input type="radio" id="k2b" name="k2" value="b">
-        <label for="k2b">[]</label>
-        <input type="radio" id="k2c" name="k2" value="c">
-        <label for="k2c">{}</label>
+      </div>
+      <section>
+        <form class="kysely" onsubmit="return tarkastaLomake(this)" >
+          <p>Mitä käytetään määrittelemään paikallinen muuttuja </p>
+          <input type="radio" id="k1a" name="k1" value="a">
+          <label for="k1a">var</label><br>
+          <input type="radio" id="k1b" name="k1" value="b">
+          <label for="k1b">let</label>
+          <input type="radio" id="k1c" name="k1" value="c">
+          <label for="k1c">const</label>
 
-        <p>Minkä sisällä olion sisältö on?</p>
-        <input type="radio" id="k3a" name="k3" value="a">
-        <label for="k3a">{}</label>
-        <input type="radio" id="k3b" name="k3" value="b">
-        <label for="k3b">()</label> <br>
-        <input type="radio" id="k3c" name="k3" value="c">
-        <label for="k3c">[]</label>
+          <p>minkä merkkien sisällä objektin sisältö on?</p>
+          <input type="radio" id="k2a" name="k2" value="a">
+          <label for="k2a">()</label> <br>
+          <input type="radio" id="k2b" name="k2" value="b">
+          <label for="k2b">[]</label>
+          <input type="radio" id="k2c" name="k2" value="c">
+          <label for="k2c">{}</label>
 
-        <p>Jos käytät if lauseketta niin tarvitseeko sinun aina käyttää myöskin else lauseketta?</p>
-        <input type="radio" id="k4a" name="k4" value="a">
-        <label for="k4a">Kyllä</label>
-        <input type="radio" id="k4b" name="k4" value="b">
-        <label for="k4b">Ei</label>
+          <p>Minkä sisällä olion sisältö on?</p>
+          <input type="radio" id="k3a" name="k3" value="a">
+          <label for="k3a">{}</label>
+          <input type="radio" id="k3b" name="k3" value="b">
+          <label for="k3b">()</label> <br>
+          <input type="radio" id="k3c" name="k3" value="c">
+          <label for="k3c">[]</label>
 
-        <p>millä saat satunnaisen luvun väliltä 1-10</p>
-        <input type="radio" id="k5a" name="k5" value="a">
-        <label for="k5a">random(1,10);</label>
-        <input type="radio" id="k5b" name="k5" value="b">
-        <label for="k5b">math.random(10);</label>
-        <input type="radio" id="k5c" name="k5" value="c">
-        <label for="k5c">Math.floor(Math.random() * 10);</label>
-        <input type="radio" id="k5d" name="k5" value="d">
-        <label for="k5d">Math.floor(Math.random() * 10) + 1;</label>
+          <p>Jos käytät if lauseketta niin tarvitseeko sinun aina käyttää myöskin else lauseketta?</p>
+          <input type="radio" id="k4a" name="k4" value="a">
+          <label for="k4a">Kyllä</label>
+          <input type="radio" id="k4b" name="k4" value="b">
+          <label for="k4b">Ei</label>
 
-        <input type="submit" id="nappula" value="tarkastaLomake">
+          <p>millä saat satunnaisen luvun väliltä 1-10</p>
+          <input type="radio" id="k5a" name="k5" value="a">
+          <label for="k5a">random(1,10);</label>
+          <input type="radio" id="k5b" name="k5" value="b">
+          <label for="k5b">math.random(10);</label>
+          <input type="radio" id="k5c" name="k5" value="c">
+          <label for="k5c">Math.floor(Math.random() * 10);</label>
+          <input type="radio" id="k5d" name="k5" value="d">
+          <label for="k5d">Math.floor(Math.random() * 10) + 1;</label>
+          <br><br>
+          <input type="submit" id="nappula" value="tarkastaLomakeet">
 
 
 
-      </form>
+        </form>
+
+      </section>
       <footer></footer>
     </div>
   </body>
