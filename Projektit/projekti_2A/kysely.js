@@ -1,10 +1,10 @@
 var tulos = 0;
 function tarkistus(muuttuja, oikea) {
   for (let i = 0; i < muuttuja.length; i++) {
-    if (muuttuja[i].checked && muuttuja[i] == muuttuja[oikea]) {
+    if (muuttuja[i].checked && muuttuja[i] == oikea[i]) {
       return tulos += 1
     }
-    else if (muuttuja[i].checked && muuttuja[i] != muuttuja[oikea]) {
+    else if (muuttuja[i].checked && muuttuja[i] != oikea[i]) {
       return tulos
     }
     else if (muuttuja[muuttuja.length-1].checked == false ){
