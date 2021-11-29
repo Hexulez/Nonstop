@@ -1,15 +1,19 @@
-//funktio minkä sisälle luon arvauspelin
+
 
 function uusi() { //funktio millä luon uuden luvun
   return Math.floor(Math.random()* 10 + 1);
 }
+
+//luodaan muutama muuttuja
 let number = uusi()
 let voitot = 0;
 let pelit = 0;
 let yritykset = 1;
 
 
-function pippeli() {
+
+//Rupesin rakentamaan tämän poohjalta koko juttua...
+function piippeli() {
   console.log(number);
   document.getElementById("numberOfGames").innerHTML = "pelatut pelit " + pelit;
   document.getElementById("wins").innerHTML = "Voitot " + voitot;
@@ -43,37 +47,45 @@ function pippeli() {
 //tästä alkaa näppäimistö osuus.
 
 let buttons = Array.from(document.getElementsByClassName("button"));
+function tulokset() {
+  document.getElementById("numberOfGames").innerHTML = "pelatut pelit " + pelit;
+  document.getElementById("wins").innerHTML = "Voitot " + voitot;
+  document.getElementById("yritys").innerHTML = "yritykset " + yritykset;
+  console.log(number);
+}
 
 buttons.map( button => {
-    button.addEventListener("click", (e) => {
-      document.getElementById("numberOfGames").innerHTML = "pelatut pelit " + pelit;
-      document.getElementById("wins").innerHTML = "Voitot " + voitot;
-      document.getElementById("yritys").innerHTML = "yritykset " + yritykset;
-      let answer = e.target.innertext;
-      if (e.target.innertext == number){
+    button.addEventListener('click', (e) => {
+      let answer = e.target.innerText;
+
+      if (answer == number){
         document.getElementById("palaute").innerHTML = "Oikein!! aloitetaan uusi peli."
         voitot ++;
         pelit ++;
         yritykset = 1;
         number = uusi()
-
+        tulokset()
       }
       else if (yritykset >= 3 ) {
         pelit ++;
         yritykset = 1;
         number = uusi()
+        tulokset()
         document.getElementById("palaute").innerHTML = "Arvauksia oli jo 3 aloitetaan uusi peli."
-
       }
-      else if (e.target.innertext < number) {
+      else if (answer < number) {
         yritykset ++;
+        tulokset()
         document.getElementById("palaute").innerHTML = "numero on isompi kuin "+ answer;
 
       }
-      else if (e.target.innertext > number) {
+      else if (answer > number) {
         yritykset ++;
+        tulokset()
         document.getElementById("palaute").innerHTML = "numero on pienmpi kuin "+ answer;
 
-  };
+      }
+
+
   });
 });
