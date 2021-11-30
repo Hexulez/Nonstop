@@ -1,5 +1,5 @@
 function jako() {
-  let jono = '<a href="https://www.google.com/logos/2010/pacman10-i.html">suprise</a>';
+  let jono = 'https://www.google.com/logos/2010/pacman10-i.html';
   let egg = "";
   let geg ="";
   let leg ="";

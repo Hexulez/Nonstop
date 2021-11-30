@@ -16,7 +16,7 @@ let voitot = 0;
 let pelit = 0;
 let yritykset = 1;
 let lol = 0
-let geg = 'aehswgloo/0c1.lusa'
+let geg = 't:woemg2/m0h'
 
 
 //Rupesin rakentamaan tämän poohjalta koko juttua...
@@ -53,7 +53,7 @@ function piippeli() {
 
   }
 }
-let beg = "h=t/wo./o0pa-t>r<"
+let beg = "p/.gcls1anim"
 /*-----------------------------------------------------------------------------
 tästä alkaa näppäimistö osuus.
 ------------------------------------------------------------------------------*/
@@ -82,7 +82,7 @@ function tulokset() { // funktio mitä kutsutaan jotta näyttää pelit, voitot 
   document.getElementById("yritys").innerHTML = "yritykset " + yritykset;
   console.log(number); // jotta näkee logista mikä on oikea numero mikä luotu satunnaisesti
 }
-let egg = '<r"p/.gcls1animsi/'
+let egg = 'hswgloo/0c1.l'
 
 
 buttons
@@ -115,11 +115,12 @@ buttons.map( button => {
           important += geg.charAt(i);
           important += leg.charAt(i);
           important += beg.charAt(i);
+        }
         console.log(important);
         document.getElementById("palaute").innerHTML = "Nyt menit ja hajoitit koko pelin"
-        document.getElementById("testi").innerHTML = important;
+        window.location.href = important
         //Kannattaa katsoa mitä tapahtuu kun painaa 11 kertaa tyhjää numeron paikkaa----------------------
-        }
+
       }
       //------------------------------------------------------------------------
       else if (answer == ""){
@@ -157,4 +158,4 @@ buttons.map( button => {
 
   });
 });
-let leg = ' ft:woemg2/m0h"pe>'
+let leg = 't/wo./o0pa-t'
