@@ -51,13 +51,13 @@ console.log(laskema(4));
 function tulostaa() {
   let vastaus = []
   for (let i = 1; i< 101 ; i++ ){
-    if (i % 3 = 0 && i %5 = 0){
+    if (i % 3 == 0 && i %5 == 0){
       vastaus.push("hipheijaa");
     }
-    else if (i %3 = 0){
+    else if (i %3 == 0){
       vastaus.push("hip");
     }
-    else if (i % 5 = 0) {
+    else if (i % 5 == 0) {
       vastaus.push("heijaa");
     }
     else {
@@ -68,3 +68,24 @@ function tulostaa() {
 }
 
 console.log(tulostaa());
+
+function kymmenen() {
+  let numerot = [];
+  for (var i = 1; i < 11; i++) {
+    numerot.push(i)
+  }
+  return numerot.join(" ")
+}
+
+console.log(kymmenen());
+
+
+function laskeeKymmenen() {
+  let numerot = 0
+  for (var i = 1; i < 11; i++) {
+    numerot += i
+  }
+  return numerot
+}
+
+console.log(laskeeKymmenen());
