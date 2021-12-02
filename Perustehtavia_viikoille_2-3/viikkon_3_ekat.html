@@ -2,10 +2,85 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="viikkón_3_ekat.js" charset="utf-8"></script>
+    <script src="viikon_3_ekat.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="viikon_3_ekat.css">
     <title></title>
   </head>
-  <body>
+  <body onload="colors()">
+    <div class="container">
+      <header>
+        <h2>Jos jostain syystä tekstit eivät ole luettavissa päivitä sivu niin värit vaihtuu.</h2>
+      </header>
+      <div class="laatikot">
+        <p>Anna parillinen luku. Tulostaa kaikki parilliset ennen sitä. mutta ei sitä tee jos annat parittoman</p>
+        <input type="text"  id="t1" >
+        <button type="button" onclick="teh1()">Tulostaa parilliset ennen annettua lukua</button>
+        <p id="t1v"></p>
+      </div>
+      <div class="laatikot">
+        <p>Salakirjoittaa antamasi tekstin</p>
+        <input type="text" id="t2">
+        <button type="button" onclick="teh2()">salakirjoitus Ö:llä</button>
+        <p id="tv2"></p>
+      </div>
+      <div class="laatikot">
+        <p>tarkistaa onko sanassa kirjainta ö</p>
+        <input type="text" id="t3" >
+        <button type="button" onclick="teh3()">Tarkistaa onko kirjainta ö</button>
+        <p id="tv3"></p>
+      </div>
+      <div class="laatikot">
+        <p>antaa lukujen laskeman</p>
+        <input type="text" id="t4">
+        <button type="button" onclick="teh4()">Laskema</button>
+        <p id="tv4"></p>
+      </div>
+      <div class="laatikot">
+        <p>jos luku on jaollinen 3:lla tulostaa hip, jos 5:llä tulostaa heijaa.</p>
+        <button type="button" onclick="tulostaa()">hipheijaa</button>
+        <p id="tv5"></p>
+      </div>
+      <div class="laatikot">
+        <p>tulostaa numerot 1-10</p>
+        <button type="button" onclick="teh6()">numerot 1-10</button>
+        <p id="tv6"></p>
+      </div>
+      <div class="laatikot">
+        <p>tulostaa numeroiden 1-10 summan.</p>
+        <button type="button" onclick="teh7()">numeroiden 1-10 summa</button>
+        <p id="tv7"></p>
+      </div>
+      <div class="laatikot" >
+        <p>laskee potenssin luvuilla.</p>
+        <input type="text" id="t8a">
+        <input type="text" id="t8b" >
+        <button type="button" onclick="teh8()">Potenssi</button>
+        <p id="tv8"></p>
+      </div>
+      <div class="laatikot">
+        <p>Etsii suurimman ja pienimmän luvun.</p>
+        <input type="text" id="t9a" >
+        <input type="text" id="t9b" >
+        <input type="text" id="t9c" >
+        <input type="text" id="t9d" >
+        <input type="text" id="t9e" >
+        <button type="button" onclick="teh9()">näyttää pienimmän ja suurimman luvun</button>
+        <p id="tv9"></p>
+      </div>
+      <div class="laatikot">
+        <p>Salakirjoittaa satunnaisilla kirjaimilla</p>
+        <input type="text" id="t10">
+        <button type="button" onclick="teh10()">salakirjoitus satunnaisilla kirjaimilla</button>
+        <p id="tv10"></p>
+      </div>
+      <div class="laatikot">
+        <p>Anna ensin pienempi luku ja sen jälkeen isompi. näyttää kaikki parittomat ja parilliset siitä välistä, sekä laskee niiden summan.</p>
+        <input type="text" id="t11a" placeholder="Anna pienempi luku" >
+        <input type="text" id="t11b" >
+        <button type="button" placeholder="Anna suurempi luku" onclick="teh11()">näyttää lukujen välistä parittomat sekä parillisen sekä niiden summan</button>
+        <p id="tv11"></p>
+      </div>
 
+    </div>
   </body>
 </html>

@@ -1,0 +1,16 @@
+.laatikot {
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  overflow: auto;
+  float: left;
+
+
+}
+input {
+  margin: 10px;
+}
+
+button {
+  margin: auto;
+}
