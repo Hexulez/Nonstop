@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="viikon_3_tokat.js" charset="utf-8"></script>
+    <script src="viikon_3_ekat.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="viikon_3_ekat.css">
+    <title></title>
+  </head>
+  <body onload="colors()">
+    <div  class="container">
+      <div class="laatikot">
+        <p>
+          scramble pelin pisteiden laskenta. <br>
+          A, E, I, N, S, T = 1p <br>
+          O, Ä, K, L = 2p <br>
+          U, M = 3p <br>
+          Y, H, J, P, R, V = 4p <br>
+          Ö, D = 7p <br>
+          B, F, G = 8p <br>
+          C = 10p <br>
+          loput kirjaimet = 12p</p>
+          <label for="ssana">Anna sana</label>
+          <input type="text" id="ssana" >
+          <button type="button" onclick="scaSana()" >Laske pisteet</button>
+          <p id="pisteet"></p>
+      </div>
+      <div class="laatikot">
+        <p>Antaa lotta numerot</p>
+        <button type="button" onclick="lottoN()">Arvo numerot</button>
+        <p id="lottonumerot"></p>
+
+      </div>
+      <div class="laatikot">
+      <p>Tekee numeroista taulukon</p>
+      <button type="button" onclick="taulukoksi()" >paina tästä</button>
+      <div id="taulukko">
+
+      </div>
+      </div>
+      <div class="laatikot">
+        <p>arpoo 5 korttia</p>
+        <button type="button" onclick="pelaa()">Anna kortit</button>
+        <p id="pelatut"></p>
+      </div>
+    </div>
+  </body>
+</html>
