@@ -1,5 +1,5 @@
 function jako() {
-  let jono = 'https://www.google.com/logos/2010/pacman10-i.html';
+  let jono = 'javascript is made by Hexulez';
   let egg = "";
   let geg ="";
   let leg ="";
@@ -21,3 +21,5 @@ function jako() {
   }
 
 }
+
+jako()
