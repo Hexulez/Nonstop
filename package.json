@@ -1,0 +1,23 @@
+{
+  "name": "nonstop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hexulez/Nonstop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hexulez/Nonstop/issues"
+  },
+  "homepage": "https://github.com/Hexulez/Nonstop#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}

@@ -3,6 +3,36 @@
 abc = abc.toUpperCase().split(", ");
 console.log(abc);
 */
+
+
+//cleaning some thing
+let string = "{akl' fat}"
+
+const clean = (str) => {
+  let arr = str.split("")
+  let fixedArr = []
+  arr.map(e => e!="{"?
+    e!="'"?
+    e!="}"?
+    fixedArr.push(e):
+    console.log("testi1"):
+    console.log("testi2"):
+    console.log("testi3"))
+    return fixedArr.join("")
+}
+
+//clean(string)
+const regCumstomer = /[0-9]/
+let elemValue = "a";
+let tester = regCumstomer.test(elemValue)
+
+console.log(tester);
+
+
+
+
+
+/*
 function Picture(os, nimi){
   this.imgSrc = os;
   this.name = nimi;
