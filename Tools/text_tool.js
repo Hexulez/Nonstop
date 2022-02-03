@@ -21,12 +21,21 @@ const clean = (str) => {
     return fixedArr.join("")
 }
 
-//clean(string)
-const regCumstomer = /[0-9]/
-let elemValue = "a";
-let tester = regCumstomer.test(elemValue)
+console.log(clean(string))
 
-console.log(tester);
+//Make some white space
+string = "firstName:minä,lastName:olen,street:paras,zip:69666,city:kotona,phone:666-6666666,email:henry.juhola@edu.keuda.fi"
+
+const whitespace = (str) =>{
+  let arr = str.split(",");
+  str = arr.join(", ")
+  console.log(str)
+}
+whitespace(string)
+
+
+
+
 
 
 

@@ -1,17 +1,4 @@
-/*
-$(document).ready(function() {
-  console.log("toimii");
-const getData = () =>{
-  console.log("testi");
-  let data =  $("form").serializeArray()
-  testi= JSON.stringify(data);
-  console.log(data);
-  console.log(testi);
-}
-  getData()
-});
-*/
-//onload
+
 
 
 //Constructor to make Object from all form data
@@ -65,9 +52,16 @@ const fetchData = () => {
   info == null?
     alert("Haettua tietoa ei löydy"):
     document.getElementById("information").innerHTML = clean(info);
-
-
 }
+
+//add whitespace
+const whitespace = (str) =>{
+  let arr = str.split(",");
+  str = arr.join(", ")
+  return str;
+}
+
+
 //clean info
 const clean = (str) => {
   let arr = str.split("")
@@ -78,8 +72,9 @@ const clean = (str) => {
     fixedArr.push(e):
     console.log("testi1"):
     console.log("testi2"):
-    console.log("testi3"))
-    return fixedArr.join("")
+    console.log("testi3"));
+    str = fixedArr.join("")
+    return whitespace(str);
 }
 
 
