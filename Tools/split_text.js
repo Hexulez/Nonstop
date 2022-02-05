@@ -1,3 +1,6 @@
+//mun eastern egg generaattori :) 
+
+
 function jako() {
   let jono = 'javascript is made by Hexulez';
   let egg = "";

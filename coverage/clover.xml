@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1644016385972" clover="3.2.0">
+  <project timestamp="1644016385972" name="All files">
+    <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2" elements="15" coveredelements="13" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
+    <file name="testaus.js" path="C:\Users\Hexulez\source\Nonstop\Testaus\testaus.js">
+      <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="70" count="1" type="stmt"/>
+      <line num="83" count="1" type="stmt"/>
+      <line num="99" count="1" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="104" count="1" type="stmt"/>
+      <line num="137" count="3" type="stmt"/>
+      <line num="177" count="1" type="stmt"/>
+      <line num="180" count="0" type="stmt"/>
+      <line num="182" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

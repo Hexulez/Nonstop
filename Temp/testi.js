@@ -1,4 +1,55 @@
 
+document.addEventListener('keydown', (e) => {
+  e.keycode == 37?
+    
+
+
+
+/*
+//detecting arrow key presses
+document.addEventListener('keydown', (e) => {
+    switch (e.keyCode) {
+        case 37:
+            alert('left');
+            break;
+        case 38:
+           alert('up');
+            break;
+        case 39:
+            alert('right');
+            break;
+        case 40:
+            alert('down');
+            break;
+    }
+});
+*/
+
+
+
+
+/*
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            alert('left');
+            break;
+        case 38:
+            alert('up');
+            break;
+        case 39:
+            alert('right');
+            break;
+        case 40:
+            alert('down');
+            break;
+    }
+};
+
+*/
+
+
+
 var luku = 1;
 let luku2 =11;
 console.log(luku);
