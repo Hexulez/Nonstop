@@ -1,10 +1,16 @@
 
 
+const asia = {1:"a",5:"b",3:"c"}
 
+console.log(asia[5]);
 
+const asia2 = [[],[],[{1:9}],[1]]
 
-
-
+const testo = ()=>{
+  asia2.forEach(e=> e.forEach(el => console.log(el+1)))
+}
+console.log(typeof asia2);
+testo()
 
 /*
 function rangeOfNumbers(startNum, endNum) {
