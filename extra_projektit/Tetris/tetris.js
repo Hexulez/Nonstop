@@ -23,9 +23,9 @@ let nextBlock = [];
 let lastPlace = [];
 let block = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
 const t = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
-const i = [{x:0, y:0, c:"#00ffff"}, {x:0, y:40, c:"#00ffff"}, {x:0, y:80, c:"#00ffff"}, {x:0, y:120, c:"#00ffff"}];
-const s = [ { x: 40, y: 0, c: "#00ff00" }, { x: 40, y: 40, c: "#00ff00" }, { x: 0, y: 40, c: "#00ff00" }, { x: 0, y: 80, c: "#00ff00" } ];
-const z = [ { x: 0, y: 0, c: "#ff0000" }, { x: 0, y: 40, c: "#ff0000" }, { x: 40, y: 40, c: "#ff0000" }, { x: 40, y: 80, c: "#ff0000" } ];
+const i = [{x:0, y:120, c:"#00ffff"}, {x:0, y:80, c:"#00ffff"}, , {x:0, y:40, c:"#00ffff"}, {x:0, y:0, c:"#00ffff"}];
+const z = [ { x: 40, y: 0, c: "#00ff00" }, { x: 40, y: 40, c: "#00ff00" }, { x: 0, y: 40, c: "#00ff00" }, { x: 0, y: 80, c: "#00ff00" } ];
+const s = [ { x: 0, y: 0, c: "#ff0000" }, { x: 0, y: 40, c: "#ff0000" }, { x: 40, y: 40, c: "#ff0000" }, { x: 40, y: 80, c: "#ff0000" } ];
 const o = [ { x: 0, y: 0, c: "#ffff00" }, { x: 40, y: 0, c: "#ffff00" }, { x: 40, y: 40, c: "#ffff00" }, { x: 0, y: 40, c: "#ffff00" } ];
 const l = [ { x: 0, y: 0, c: "#ff7f00" }, { x: 0, y: 40, c: "#ff7f00" }, { x: 0, y: 80, c: "#ff7f00" }, { x: 40, y: 80, c: "#ff7f00" } ];
 const j = [{ x: 40, y: 0, c: "#0000ff" }, { x: 40, y: 40, c: "#0000ff" }, { x: 40, y: 80, c: "#0000ff" }, { x: 0, y: 80, c: "#0000ff" }];
@@ -167,13 +167,19 @@ const drawTetrisLines = () => {
   })
 };
 
+//block rotation
+const rotation = () =>{
+
+}
+
 //detecting arrow key presses and change direction... :D
 document.addEventListener('keydown', (e) => {
 
   if(e.keyCode == 37){ // tarkistaa onko painettu vasemmalle?
     block.forEach(e =>e.x -= 40)
   }
-  else if (e.keyCode == 38){ //tarkistaa onko painettu ylös?
+  else if (e.keyCode == 32){ //tarkistaa onko painettu avaruutta?
+
   }
   else if (e.keyCode == 39){  //tarkistaa onko painettu oikealle?
     block.forEach(e=> e.x += 40)
