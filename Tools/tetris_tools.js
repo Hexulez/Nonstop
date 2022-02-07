@@ -1,14 +1,20 @@
 // deep copy
 // JSON.parse(JSON.stringify(arr));
 
+{
 
-let num = 800;
+}
+
+
+
+
+let num = 440;
 const toolToElif = () =>{
   let str = "";
   let list = {};
   for (let i = 0;i<22;i++){
     str += num +" : " + i + ", ";
-    num -= 40;
+    num -= 20;
     if (i % 4 == 0){
       str +="\n"
     }
@@ -19,12 +25,12 @@ const toolToElif = () =>{
 toolToElif()
 
 
-/*
+
 //can make tetris objet
 let block =[];
 let times = 0
 const objectCreator = () =>{
-  for (let i = 40;i<=840;i += 40){
+  for (let i = 0;i<=220;i += 10){
     let ob = {x:0, y:i};
     block.push(ob);
     times ++
@@ -34,7 +40,7 @@ const objectCreator = () =>{
 }
 
 console.log(objectCreator());
-*/
+
 
 /*
 //change tetris block place

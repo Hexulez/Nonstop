@@ -7,28 +7,28 @@ let partColor= "red";
 let partColor2 = "blue";
 let played = []
 const testBlock = [
-  { x: 0, y: 40 },  { x: 0, y: 80 },
-  { x: 0, y: 120 }, { x: 0, y: 160 },
-  { x: 0, y: 200 }, { x: 0, y: 240 },
-  { x: 0, y: 280 }, { x: 0, y: 320 },
-  { x: 0, y: 360 }, { x: 0, y: 400 },
-  { x: 0, y: 440 }, { x: 0, y: 480 },
+  { x: 0, y: 20 },  { x: 0, y: 40 },
+  { x: 0, y: 60 }, { x: 0, y: 160 },
+  { x: 0, y: 200 }, { x: 0, y: 220 },
+  { x: 0, y: 240 }, { x: 0, y: 320 },
+  { x: 0, y: 360 }, { x: 0, y: 200 },
+  { x: 0, y: 420 }, { x: 0, y: 440 },
   { x: 0, y: 520 }, { x: 0, y: 560 },
-  { x: 0, y: 600 }, { x: 0, y: 640 },
-  { x: 0, y: 680 }, { x: 0, y: 720 },
-  { x: 0, y: 760 }, { x: 0, y: 800 },
-  { x: 0, y: 840 }
+  { x: 0, y: 600 }, { x: 0, y: 620 },
+  { x: 0, y: 640 }, { x: 0, y: 720 },
+  { x: 0, y: 760 }, { x: 0, y: 400 },
+  { x: 0, y: 820 }
 ]
 let nextBlock = [];
 let lastPlace = [];
-let block = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
-const t = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
-const i = [{x:0, y:120, c:"#00ffff"}, {x:0, y:80, c:"#00ffff"}, {x:0, y:40, c:"#00ffff"}, {x:0, y:0, c:"#00ffff"}];
-const z = [ { x: 40, y: 0, c: "#00ff00" }, { x: 40, y: 40, c: "#00ff00" }, { x: 0, y: 40, c: "#00ff00" }, { x: 0, y: 80, c: "#00ff00" } ];
-const s = [ { x: 0, y: 0, c: "#ff0000" }, { x: 0, y: 40, c: "#ff0000" }, { x: 40, y: 40, c: "#ff0000" }, { x: 40, y: 80, c: "#ff0000" } ];
-const o = [ { x: 0, y: 0, c: "#ffff00" }, { x: 40, y: 0, c: "#ffff00" }, { x: 40, y: 40, c: "#ffff00" }, { x: 0, y: 40, c: "#ffff00" } ];
-const l = [ { x: 0, y: 0, c: "#ff7f00" }, { x: 0, y: 40, c: "#ff7f00" }, { x: 0, y: 80, c: "#ff7f00" }, { x: 40, y: 80, c: "#ff7f00" } ];
-const j = [{ x: 40, y: 0, c: "#0000ff" }, { x: 40, y: 40, c: "#0000ff" }, { x: 40, y: 80, c: "#0000ff" }, { x: 0, y: 80, c: "#0000ff" }];
+let block = [{x:20, y:0, c:	"#400040"}, {x:20, y:20, c:	"#400040"}, {x:0, y:20, c:"#400040"}, {x:20, y:40, c:"#400040"}];
+const t = [{x:20, y:0, c:	"#400040"}, {x:20, y:20, c:	"#400040"}, {x:0, y:20, c:"#400040"}, {x:20, y:40, c:"#400040"}];
+const i = [{x:0, y:60, c:"#00ffff"}, {x:0, y:40, c:"#00ffff"}, {x:0, y:20, c:"#00ffff"}, {x:0, y:0, c:"#00ffff"}];
+const z = [ { x: 20, y: 0, c: "#00ff00" }, { x: 20, y: 20, c: "#00ff00" }, { x: 0, y: 20, c: "#00ff00" }, { x: 0, y: 40, c: "#00ff00" } ];
+const s = [ { x: 0, y: 0, c: "#ff0000" }, { x: 0, y: 20, c: "#ff0000" }, { x: 20, y: 20, c: "#ff0000" }, { x: 20, y: 40, c: "#ff0000" } ];
+const o = [ { x: 0, y: 0, c: "#ffff00" }, { x: 20, y: 0, c: "#ffff00" }, { x: 20, y: 20, c: "#ffff00" }, { x: 0, y: 20, c: "#ffff00" } ];
+const l = [ { x: 0, y: 0, c: "#ff7f00" }, { x: 0, y: 20, c: "#ff7f00" }, { x: 0, y: 40, c: "#ff7f00" }, { x: 20, y: 40, c: "#ff7f00" } ];
+const j = [{ x: 20, y: 0, c: "#0000ff" }, { x: 20, y: 20, c: "#0000ff" }, { x: 20, y: 40, c: "#0000ff" }, { x: 0, y: 40, c: "#0000ff" }];
 
 let logicArr = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 const blockList = [t, i, s, z, o, l, j];
@@ -43,8 +43,16 @@ const drawPartBlock = (partPiece) => {
   console.log(partPiece);
   tetris_ctx.fillStyle = partPiece.c;
   tetris_ctx.strokeStyle = "light grey";
-  tetris_ctx.fillRect(partPiece.x, partPiece.y, 39, 39);
-  tetris_ctx.strokeRect(partPiece.x, partPiece.y, 39,39);
+  tetris_ctx.fillRect(partPiece.x, partPiece.y, 20, 20);
+  tetris_ctx.strokeRect(partPiece.x, partPiece.y, 20,20);
+}
+
+const unDrawPartBlock = (partPiece) => {
+  console.log(partPiece);
+  tetris_ctx.fillStyle = "white";
+  tetris_ctx.strokeStyle = "white";
+  tetris_ctx.fillRect(partPiece.x, partPiece.y, 20, 20);
+  tetris_ctx.strokeRect(partPiece.x, partPiece.y, 20,20);
 }
 
 //clear canvas
@@ -55,7 +63,9 @@ const erase = () => {
 const drawblock = () =>{
   block.forEach(e => drawPartBlock(e));
 }
-
+const unDrawblock = () =>{
+  block.forEach(e => unDrawPartBlock(e));
+}
 //drawPlayed
 const drawPlayed =() => {
   played.forEach(e=> drawPartBlock(e))
@@ -73,18 +83,18 @@ const blockPicker = () =>{
 //falling
 const falling = () => {
   lastPlace = JSON.parse(JSON.stringify(block));
-  block.forEach(e =>{return e.y = e.y+40});
+  block.forEach(e =>{return e.y = e.y+20});
   console.log(block);
 }
 
-//const bottom =(elem) => elem == 800;
+//const bottom =(elem) => elem == 400;
 
 
 
 let logic = false;
 //logic
 const logicBottom = () =>{
-  block.forEach(e=> {if (e.y >= 800){
+  block.forEach(e=> {if (e.y >= 400){
     //console.log(played);
     logic = true;
   }} )
@@ -120,12 +130,13 @@ const collision =  () =>{
 }
 
 //replace long if else
-const keyObj =  {800 : 0,
-760 : 1, 720 : 2, 680 : 3, 640 : 4,
-600 : 5, 560 : 6, 520 : 7, 480 : 8,
-440 : 9, 400 : 10, 360 : 11, 320 : 12,
-280 : 13, 240 : 14, 200 : 15, 160 : 16,
-120 : 17, 80 : 18, 40 : 19, 0 : 20}
+const keyObj =  {440 : 0,
+420 : 1, 400 : 2, 380 : 3, 360 : 4,
+340 : 5, 320 : 6, 300 : 7, 280 : 8,
+260 : 9, 240 : 10, 220 : 11, 200 : 12,
+180 : 13, 160 : 14, 140 : 15, 120 : 16,
+100 : 17, 80 : 18, 60 : 19, 40 : 20,
+20 : 21}
 
 const elif = (key) => keyObj[key]
 
@@ -140,18 +151,8 @@ let tetrisLines = () =>{
       logicArr[elif(el.y)].push(el)
     })
   })
-  //console.log(logicArr);
   played = []
-  /*played.map(e =>{
-    e.map(el=>{
-      if (el.y == 800){
-        logicArr[0].push(el)
-      }
-      else if (el.y == 760){
-        logicArr[1].push(el)
-      }
-    })
-  })*/
+  drawTetrisLines()
 }
 
 //drawtetris
@@ -168,7 +169,19 @@ const drawTetrisLines = () => {
 };
 []
 
+//check if full lines
+const checkLines = () =>{ //tarvii korjaa
+  for (let i = 0;i<logicArr.length;++i){
+    if (logicArr[i].length >= 10){
+      logicArr.splice(i-1);
+      let arr = []
+      logicArr.push(arr)
+      clear()
+    }
+  }
 
+
+}
 
 //block rotation
 const rotation = (block) =>{
@@ -181,34 +194,33 @@ const rotation = (block) =>{
         console.log("=)");
       }
       else {
-        if (block[i].x == block[1].x-40 && block[i].y == block[1].y-40  ){
-          block[i].x += 80;
-        }
-        else if (block[i].x == block[1].x && block[i].y == block[1].y-40 ){
+        if (block[i].x == block[1].x-20 && block[i].y == block[1].y-20  ){
           block[i].x += 40;
+        }
+        else if (block[i].x == block[1].x && block[i].y == block[1].y-20 ){
+          block[i].x += 20;
+          block[i].y += 20;
+        }
+        else if (block[i].x == block[1].x +20 && block[i].y == block[1].y-20 ){
           block[i].y += 40;
         }
-        else if (block[i].x == block[1].x +40 && block[i].y == block[1].y-40 ){
-          block[i].y += 80;
+        else if (block[i].x == block[1].x+20 && block[i].y == block[1].y ){
+          block[i].x -= 20;
+          block[i].y += 20;
         }
-        else if (block[i].x == block[1].x+40 && block[i].y == block[1].y ){
+        else if (block[i].x == block[1].x+20 && block[i].y == block[1].y+20 ){
           block[i].x -= 40;
-          block[i].y += 40;
         }
-        else if (block[i].x == block[1].x+40 && block[i].y == block[1].y+40 ){
-          block[i].x -= 80;
-          block[i].y -= 80;
+        else if (block[i].x == block[1].x && block[i].y == block[1].y+20 ){
+          block[i].x -= 20;
+          block[i].y -= 20;
         }
-        else if (block[i].x == block[1].x && block[i].y == block[1].y+40 ){
-          block[i].x -= 40;
+        else if (block[i].x == block[1].x-20 && block[i].y == block[1].y+20 ){
           block[i].y -= 40;
         }
-        else if (block[i].x == block[1].x-40 && block[i].y == block[1].y+40 ){
-          block[i].y -= 80;
-        }
-        else if (block[i].x == block[1].x-40 && block[i].y == block[1].y ){
-          block[i].x += 40;
-          block[i].y -= 40;
+        else if (block[i].x == block[1].x-20 && block[i].y == block[1].y ){
+          block[i].x += 20;
+          block[i].y -= 20;
         }
 
 
@@ -221,40 +233,65 @@ const rotation = (block) =>{
 document.addEventListener('keydown', (e) => {
 
   if(e.keyCode == 37){ // tarkistaa onko painettu vasemmalle?
-    block.forEach(e =>e.x -= 40)
+    unDrawblock()
+    block.forEach(e =>e.x -= 20)
+    main()
   }
   else if (e.keyCode == 32){ //tarkistaa onko painettu avaruutta?
+    unDrawblock()
     rotation(block)
-    mainLoop()
+    main()
   }
   else if (e.keyCode == 39){  //tarkistaa onko painettu oikealle?
-    block.forEach(e=> e.x += 40)
+    unDrawblock()
+    block.forEach(e=> e.x += 20)
+    main()
   }
   else if (e.keyCode == 40){  //tarkistaa onko painettu alas
+    unDrawblock();
+    falling()
+    main()
   }
 });
 
+nextBlock = JSON.parse(JSON.stringify(blockList[randomBlock()]));
 //Rule all the kingdom =)
 const main = () =>{
-  nextBlock = JSON.parse(JSON.stringify(blockList[randomBlock()]));
-  console.log("kerran");
-  const mainLoop = () =>{
-      //console.log(played);
-      erase();
-      tetrisLines();
-      drawTetrisLines()
-      falling();
+  //erase();
+  //unDrawblock()
+  //tetrisLines();
+  //drawTetrisLines()
+  //falling();
+  dropStart = Date.now()
+  bottomCheck()
+  //drawPlayed();
+  drawblock();
 
-      bottomCheck()
-      drawPlayed();
-      drawblock();
-      setTimeout(()=>{
-        mainLoop()
-    }, 800 )
-  }
-  mainLoop()
+
 }
 
+let dropStart = Date.now();
 
+const drop = () =>{
+  let now = Date.now();
+  let delta = now - dropStart;
+  if (delta>600){
+    //erase();
+    unDrawblock()
+    checkLines()
+    tetrisLines();
+    drawTetrisLines()
+    falling();
 
-// MUistiin.... [[{}]] rakenne pelattuihin palikoihin
+    bottomCheck()
+    drawPlayed();
+    drawblock();
+
+    dropStart= Date.now();
+  }
+
+    requestAnimationFrame(drop);
+
+}
+
+drop()
