@@ -38,6 +38,12 @@ const randomBlock = () => {
   return Math.floor(Math.random()*6)
 }
 
+//borders
+const drawBorders =() => {
+  tetris_ctx.strokeStyle  = "black" //reunaväri
+  tetris_ctx.strokeRect(0, 0, 240, 440); //määrittelee reunojen alueen
+}
+
 //draw block piece
 const drawPartBlock = (partPiece) => {
   console.log(partPiece);
@@ -96,7 +102,7 @@ const falling = () => {
 let logic = false;
 //logic
 const logicBottom = () =>{
-  block.forEach(e=> {if (e.y >= 420){
+  block.forEach(e=> {if (e.y >= 440){
     //console.log(played);
     logic = true;
   }} )
@@ -193,6 +199,7 @@ const checkLines = () =>{ //tarvii korjaa
     }
   remove.forEach(e=>logicArr.splice(e,1));
   erase()
+  drawBorders()
   drawTetrisLines()
 
 
@@ -295,7 +302,7 @@ const drop = () =>{
     //erase();
     unDrawblock()
     falling();
-
+    drawBorders();
     //bottomCheck()
     //drawPlayed();
     //drawblock();
