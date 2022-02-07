@@ -85,6 +85,8 @@ const falling = () => {
   lastPlace = JSON.parse(JSON.stringify(block));
   block.forEach(e =>{return e.y = e.y+20});
   console.log(block);
+  bottomCheck()
+  drawblock()
 }
 
 //const bottom =(elem) => elem == 400;
@@ -94,7 +96,7 @@ const falling = () => {
 let logic = false;
 //logic
 const logicBottom = () =>{
-  block.forEach(e=> {if (e.y >= 400){
+  block.forEach(e=> {if (e.y >= 420){
     //console.log(played);
     logic = true;
   }} )
@@ -108,6 +110,8 @@ const bottomCheck = () =>{
   if (logic == true){
     played.push(JSON.parse(JSON.stringify(lastPlace)));
     blockPicker()
+    tetrisLines()
+    checkLines()
     logic=false
     console.log(played);
   }
@@ -167,34 +171,46 @@ const drawTetrisLines = () => {
     })
   })
 };
-[]
+
 
 //check if full lines
 const checkLines = () =>{ //tarvii korjaa
-  for (let i = 0;i<logicArr.length;++i){
-    if (logicArr[i].length >= 10){
-      logicArr.splice(i-1);
-      let arr = []
-      logicArr.push(arr)
-      clear()
+  let remove = []
+  for (let i = 0;i<logicArr.length;++i){ //käy kaikki tiputetut palat läpi.
+    let tiputa = false;   //asettaa uuden tarkistus arvon jos löytää täysiä rivejä
+    if (logicArr[i].length >= 10){ //tarkistaa onko täysi rivi
+      console.log("tässä");
+      console.log(logicArr[i]);
+      remove.push(i); //puskee rivi numeron jotta voi myöhemmin poistaa
+      tiputa = true;  //ilmoittaa löytyneestä täydestä rivistä
+      if (tiputa == true){
+        for (let j = i;j<logicArr.length;j++){  //tiputtaa kaikkia loppuja rivejä alemmaksi.
+          logicArr[j].every(e => e.y += 20)
+
+        }
     }
-  }
+      }
+    }
+  remove.forEach(e=>logicArr.splice(e,1));
+  erase()
+  drawTetrisLines()
 
 
 }
 
 //block rotation
 const rotation = (block) =>{
-  if (block[0].c == "#00ffff" || block[0].c == "#ffff00"){
+  if (block[0].c == "#00ffff" || block[0].c == "#ffff00"){  //ottaa i ja o palikan sivuun
     console.log("testp");
   }
+  //käyttää lopuissa palikoissa [1] paikalla olevaa palikkaa kiintopisteenä kääntämisessä
   else {
     for (let i = 0; i<5;i++){
       if (i == 1){
         console.log("=)");
       }
       else {
-        if (block[i].x == block[1].x-20 && block[i].y == block[1].y-20  ){
+        if (block[i].x == block[1].x-20 && block[i].y == block[1].y-20  ){ //yksin kertaisesti siirtää eripaikkaan palikat
           block[i].x += 40;
         }
         else if (block[i].x == block[1].x && block[i].y == block[1].y-20 ){
@@ -278,14 +294,11 @@ const drop = () =>{
   if (delta>600){
     //erase();
     unDrawblock()
-    checkLines()
-    tetrisLines();
-    drawTetrisLines()
     falling();
 
-    bottomCheck()
-    drawPlayed();
-    drawblock();
+    //bottomCheck()
+    //drawPlayed();
+    //drawblock();
 
     dropStart= Date.now();
   }
