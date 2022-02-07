@@ -23,7 +23,7 @@ let nextBlock = [];
 let lastPlace = [];
 let block = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
 const t = [{x:40, y:0, c:	"#800080"}, {x:40, y:40, c:	"#800080"}, {x:0, y:40, c:"#800080"}, {x:40, y:80, c:"#800080"}];
-const i = [{x:0, y:120, c:"#00ffff"}, {x:0, y:80, c:"#00ffff"}, , {x:0, y:40, c:"#00ffff"}, {x:0, y:0, c:"#00ffff"}];
+const i = [{x:0, y:120, c:"#00ffff"}, {x:0, y:80, c:"#00ffff"}, {x:0, y:40, c:"#00ffff"}, {x:0, y:0, c:"#00ffff"}];
 const z = [ { x: 40, y: 0, c: "#00ff00" }, { x: 40, y: 40, c: "#00ff00" }, { x: 0, y: 40, c: "#00ff00" }, { x: 0, y: 80, c: "#00ff00" } ];
 const s = [ { x: 0, y: 0, c: "#ff0000" }, { x: 0, y: 40, c: "#ff0000" }, { x: 40, y: 40, c: "#ff0000" }, { x: 40, y: 80, c: "#ff0000" } ];
 const o = [ { x: 0, y: 0, c: "#ffff00" }, { x: 40, y: 0, c: "#ffff00" }, { x: 40, y: 40, c: "#ffff00" }, { x: 0, y: 40, c: "#ffff00" } ];
@@ -166,10 +166,55 @@ const drawTetrisLines = () => {
     })
   })
 };
+[]
+
+
 
 //block rotation
-const rotation = () =>{
+const rotation = (block) =>{
+  if (block[0].c == "#00ffff" || block[0].c == "#ffff00"){
+    console.log("testp");
+  }
+  else {
+    for (let i = 0; i<5;i++){
+      if (i == 1){
+        console.log("=)");
+      }
+      else {
+        if (block[i].x == block[1].x-40 && block[i].y == block[1].y-40  ){
+          block[i].x += 80;
+        }
+        else if (block[i].x == block[1].x && block[i].y == block[1].y-40 ){
+          block[i].x += 40;
+          block[i].y += 40;
+        }
+        else if (block[i].x == block[1].x +40 && block[i].y == block[1].y-40 ){
+          block[i].y += 80;
+        }
+        else if (block[i].x == block[1].x+40 && block[i].y == block[1].y ){
+          block[i].x -= 40;
+          block[i].y += 40;
+        }
+        else if (block[i].x == block[1].x+40 && block[i].y == block[1].y+40 ){
+          block[i].x -= 80;
+          block[i].y -= 80;
+        }
+        else if (block[i].x == block[1].x && block[i].y == block[1].y+40 ){
+          block[i].x -= 40;
+          block[i].y -= 40;
+        }
+        else if (block[i].x == block[1].x-40 && block[i].y == block[1].y+40 ){
+          block[i].y -= 80;
+        }
+        else if (block[i].x == block[1].x-40 && block[i].y == block[1].y ){
+          block[i].x += 40;
+          block[i].y -= 40;
+        }
 
+
+    }
+    }
+  }
 }
 
 //detecting arrow key presses and change direction... :D
@@ -179,7 +224,8 @@ document.addEventListener('keydown', (e) => {
     block.forEach(e =>e.x -= 40)
   }
   else if (e.keyCode == 32){ //tarkistaa onko painettu avaruutta?
-
+    rotation(block)
+    mainLoop()
   }
   else if (e.keyCode == 39){  //tarkistaa onko painettu oikealle?
     block.forEach(e=> e.x += 40)
@@ -193,7 +239,6 @@ const main = () =>{
   nextBlock = JSON.parse(JSON.stringify(blockList[randomBlock()]));
   console.log("kerran");
   const mainLoop = () =>{
-    setTimeout(()=>{
       //console.log(played);
       erase();
       tetrisLines();
@@ -203,8 +248,9 @@ const main = () =>{
       bottomCheck()
       drawPlayed();
       drawblock();
-      mainLoop()
-    }, 200 )
+      setTimeout(()=>{
+        mainLoop()
+    }, 800 )
   }
   mainLoop()
 }
