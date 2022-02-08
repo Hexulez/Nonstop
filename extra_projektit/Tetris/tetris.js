@@ -207,8 +207,11 @@ const checkLines = () =>{ //tarvii korjaa
 
 //block rotation
 const rotation = (block) =>{
-  if (block[0].c == "#00ffff" || block[0].c == "#ffff00"){  //ottaa i ja o palikan sivuun
+  if (block[0].c == "#ffff00"){  //ottaa o palikan sivuun
     console.log("testp");
+  }
+  else if(block[0].c == "#00ffff"){
+    
   }
   //käyttää lopuissa palikoissa [1] paikalla olevaa palikkaa kiintopisteenä kääntämisessä
   else {
