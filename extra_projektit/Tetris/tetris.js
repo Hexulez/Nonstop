@@ -1,3 +1,10 @@
+/*
+Tämä on minun ylpeyden aihe etenkin sen jälkeen kun saan tämän valmiiksi
+Koodi ei ole kaikista näteintä tai tehokkainta, mutta se on puhtaasti omaa käsialaa.
+Toki Googlea jouduin hydyntämään hetkittäin mutta logiikka ja toteutus on tehty lennosta,
+aina sitä mukaan kun tarvitsin uuden asian.
+
+*/
 
 
 //muuttujia ja vakioita
@@ -207,17 +214,40 @@ const checkLines = () =>{ //tarvii korjaa
 
 //block rotation
 const rotation = (block) =>{
-  if (block[0].c == "#ffff00"){  //ottaa o palikan sivuun
+  if (block[0].c == "#ffff00"){  //ottaa i ja o palikan sivuun
     console.log("testp");
-  }
-  else if(block[0].c == "#00ffff"){
-    
   }
   //käyttää lopuissa palikoissa [1] paikalla olevaa palikkaa kiintopisteenä kääntämisessä
   else {
     for (let i = 0; i<5;i++){
       if (i == 1){
         console.log("=)");
+      }
+      else if (block[i].c == "#00ffff"){
+        if (block[i].y == block[1].y +20){
+          block[i].x -=20;
+          block[i].y -=20;
+        }
+        else if (block[i].y == block[1].y -20){
+          block[i].x +=20;
+          block[i].y +=20;
+        }
+        else if (block[i].y == block[1].y -40){
+          block[i].x +=40;
+          block[i].y +=40;
+        }
+        else if (block[i].x == block[1].x -20){
+          block[i].x +=20;
+          block[i].y +=20;
+        }
+        else if (block[i].x == block[1].x +20){
+          block[i].x -=20;
+          block[i].y -=20;
+        }
+        else if (block[i].x == block[1].x +40){
+          block[i].x -=40;
+          block[i].y -=40;
+        }
       }
       else {
         if (block[i].x == block[1].x-20 && block[i].y == block[1].y-20  ){ //yksin kertaisesti siirtää eripaikkaan palikat
@@ -250,7 +280,7 @@ const rotation = (block) =>{
         }
 
 
-    }
+      }
     }
   }
 }
