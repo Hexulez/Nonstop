@@ -48,7 +48,7 @@ const randomBlock = () => {
 //borders
 const drawBorders =() => {
   tetris_ctx.strokeStyle  = "black" //reunaväri
-  tetris_ctx.strokeRect(0, 0, 240, 440); //määrittelee reunojen alueen
+  tetris_ctx.strokeRect(0, 0, 200, 440); //määrittelee reunojen alueen
 }
 
 //draw block piece
@@ -185,29 +185,33 @@ const drawTetrisLines = () => {
   })
 };
 
-
+let tiputa = false;   //asettaa uuden tarkistus arvon jos löytää täysiä rivejä
+let remove = []
 //check if full lines
 const checkLines = () =>{ //tarvii korjaa
-  let remove = []
   for (let i = 0;i<logicArr.length;++i){ //käy kaikki tiputetut palat läpi.
-    let tiputa = false;   //asettaa uuden tarkistus arvon jos löytää täysiä rivejä
     if (logicArr[i].length >= 10){ //tarkistaa onko täysi rivi
       console.log("tässä");
       console.log(logicArr[i]);
-      remove.push(i); //puskee rivi numeron jotta voi myöhemmin poistaa
+      remove.unshift(i); //puskee rivi numeron jotta voi myöhemmin poistaa
       tiputa = true;  //ilmoittaa löytyneestä täydestä rivistä
-      if (tiputa == true){
-        for (let j = i;j<logicArr.length;j++){  //tiputtaa kaikkia loppuja rivejä alemmaksi.
-          logicArr[j].every(e => e.y += 20)
-
-        }
     }
       }
-    }
   remove.forEach(e=>logicArr.splice(e,1));
-  erase()
-  drawBorders()
-  drawTetrisLines()
+  let count = 20*remove.lenght;
+  if (tiputa == true){
+    for (let j = remove[0];j<logicArr.length;j++){  //tiputtaa kaikkia loppuja rivejä alemmaksi.
+      logicArr[j].every(e => e.y += count);
+      console.log("---------------");
+      console.log(logicArr[j]);
+      console.log("-------------");
+      count -= 20;
+    }
+  }
+  remove = [];
+  erase();
+  drawBorders();
+  drawTetrisLines();
 
 
 }

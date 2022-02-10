@@ -1,0 +1,28 @@
+.theTask{
+  background-color: blue;
+
+
+}
+
+.done {
+  background-color: green;
+
+}
+
+
+
+.closeX {
+  size:15px;
+  position:  relative;
+  left: 95%;
+  bottom: 30px;
+}
+
+p {
+}
+
+
+body{
+  background: rgb(131,58,180);
+background: linear-gradient(196deg, rgba(131,58,180,0.409868170901173) 0%, rgba(29,207,253,0.44348161627932425) 50%, rgba(252,176,69,0.48269730255383403) 100%);
+}
