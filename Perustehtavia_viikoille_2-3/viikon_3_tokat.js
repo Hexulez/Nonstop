@@ -16,8 +16,12 @@ function scramble(sana) {
   let total = 0;
   for (let i = 0; i <sana.length; i++ ) {
     for (let x = 0; x <pisteet.length; x++){
+      console.log(sana[i]);
+      console.log(pisteet[x]);
 
       if(pisteet[x].includes(sana[i])) {
+        console.log("match");
+        console.log(x);
 
         switch (x) {
 
@@ -44,7 +48,7 @@ function scramble(sana) {
             break;
 
         }
-
+        break;
       }
       else if (x == pisteet.length -1) {
         total += 12;

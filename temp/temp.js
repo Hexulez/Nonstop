@@ -1,3 +1,13 @@
+/*–let lause = ”Heippa maailma, onpa hyvä ilma”;
+let sana = /ilma/;
+lause.match(sana); --> [ 'ilma', 'ilma’ ]
+*/
+
+let lause = 'Mantalla on panta päässä ja santaa varpaissa ja kantapäissä ja kädessä rantapallo';
+
+let sana = /Manta|panta|santa/g;
+
+console.log(lause.match(sana));// --> ['Manta', 'panta', 'santa'];
 /*
 function smallestCommons(arr) {
   let [min, max] = arr.sort((a, b) => a-b);
@@ -27,7 +37,7 @@ console.log("testi")
 }
 console.log(smallestCommons([23,18]));
 */
-
+/*
 function smallestCommons(arr) {
   // Setup
   const [min, max] = arr.sort((a, b) => a - b);
@@ -54,3 +64,4 @@ function smallestCommons(arr) {
 }
 
 console.log(smallestCommons([23, 18]));
+*/

@@ -5,7 +5,7 @@ function parilliset(num) {
   }
   else {
     let luvut = []
-    for (let i = 1; i < num; i++){
+    for (let i = 1; i <= num; i++){
       if (i % 2 == 0 ){
         luvut.push(i);
       }
@@ -28,7 +28,7 @@ function salakirjoitus(sana) {
     salattu.push(jono[i]);
     salattu.push("ö")
   }
-  return salattu.toString("");
+  return salattu.join("");
 }
 
 function teh2() {
@@ -146,7 +146,7 @@ function salakirjoitusRandom(sana) {
 }
 
 function teh10() {
-  return document.getElementById("tv10").innerHTML = teh10(document.getElementById("t10").value);
+  return document.getElementById("tv10").innerHTML = salakirjoitusRandom(document.getElementById("t10").value);
 }
 console.log(salakirjoitusRandom("hoplaa"));
 
@@ -164,21 +164,18 @@ function pariTonSumma(x,y) {
       pariton.push(i);
     }
   }
-  let summa = 0
-  let p = []
-  if (pariton.length > parillinen.length){
-    p = pariton;
+  let summapari = 0;
+  let summaPariton = 0;
+
+  for (var i = 0; i < parillinen.length; i++) {
+    summapari += parillinen[i];
   }
-  else {
-    p = parillinen;
-  }
-    for (var i = 0; i < p.length; i++) {
-      summa += parillinen[i];
-      summa += pariton[0];
+    for (var i = 0; i < pariton.length; i++) {
+      summaPariton += pariton[0];
     }
     console.log(parillinen);
     console.log(pariton);
-  return "Parilliset "+ parillinen + " Parittomat " + pariton+ " niiden summa " + summa;
+  return "Parilliset "+ parillinen + " Parittomat " + pariton+ " niiden summat: parillinen " + summapari + " parittomat " + summaPariton;
 }
 
 function teh11() {
