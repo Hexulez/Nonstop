@@ -46,13 +46,16 @@ function scramble(sana) {
             case 6:
             total +=10;
             break;
-
+            default:
+            total += 12;
+            break;
         }
-        break;
+
       }
-      else if (x == pisteet.length -1) {
+      /*
+        else if (x == pisteet.length -1) {
         total += 12;
-      }
+      }*/
     }
   }
 console.log(total);
